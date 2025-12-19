@@ -12,9 +12,11 @@ export default defineConfig(({ mode }) => {
       react(),
       crx({ manifest }),
     ],
-    // .env의 OPENAI_API_KEY를 직접 사용
+    // .env의 API 키들을 직접 사용
     define: {
       '__OPENAI_API_KEY__': JSON.stringify(env.OPENAI_API_KEY || ''),
+      '__GEMINI_API_KEY__': JSON.stringify(env.GEMINI_API_KEY || ''),
+      '__BACKEND_API_URL__': JSON.stringify(env.BACKEND_API_URL || 'http://localhost:5000'),
     },
     server: {
       port: 5173,
