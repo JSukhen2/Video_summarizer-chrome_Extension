@@ -1,58 +1,10 @@
 # Dependencies
 node_modules/
-.pnp
-.pnp.js
 
 # Build output
 dist/
-build/
 
-# Environment variables (중요!)
+# Environment variables
 .env
 .env.local
 .env.*.local
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-
-# TypeScript
-*.tsbuildinfo
-
-# Misc
-*.local
-
-# ===== 소스 코드 숨김 (Chrome Extension 배포용) =====
-# Source code
-src/
-
-# Config files
-vite.config.ts
-tsconfig.json
-tsconfig.app.json
-tsconfig.node.json
-eslint.config.js
-
-# HTML entry points
-index.html
-sidepanel.html
-
-# Package files (선택적으로 숨김)
-package.json
-package-lock.json
-
-# Manifest (Chrome Extension)
-manifest.json
-
-# Public assets
-public/
