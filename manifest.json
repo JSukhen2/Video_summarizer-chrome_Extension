@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Video Summarizer",
+  "description": "웹페이지의 비디오를 감지하고 AI로 요약 및 목차를 생성합니다",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Video Summarizer"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/content/index.ts"],
+      "matches": ["https://*/*", "http://*/*"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "webRequest",
+    "sidePanel",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*",
+    "*://*/*"
+  ]
+}
